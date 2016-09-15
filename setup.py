@@ -31,6 +31,7 @@ setup(
         'simplejson>=2.2.0',
         'six>=1.4.0',
         'python-dateutil',
+        'mock>=2.0.0'
     ],
 
     classifiers=[

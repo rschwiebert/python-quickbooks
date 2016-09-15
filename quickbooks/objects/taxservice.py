@@ -54,7 +54,7 @@ class TaxService(QuickbooksBaseObject, UpdateMixin):
         if not qb:
             qb = QuickBooks()
 
-        if self.TaxCodeId and self.TaxCodeId > 0:
+        if self.TaxCodeId and int(self.TaxCodeId) > 0:
             json_data = qb.update_object(self.qbo_object_name, self.to_json())
         else:
             json_data = qb.create_object(self.qbo_object_name, self.to_json())

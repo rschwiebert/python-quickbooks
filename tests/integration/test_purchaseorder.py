@@ -1,3 +1,4 @@
+from __future__ import print_function
 import os
 import unittest
 
@@ -46,7 +47,7 @@ class PurchaseOrderTest(unittest.TestCase):
         purchaseorder.APAccountRef = account.to_ref()
         purchaseorder.TotalAmt = 100
 
-        print purchaseorder.to_json()
+        print(purchaseorder.to_json())
         purchaseorder.save(qb=self.qb_client)
 
         query_purchaseorder = PurchaseOrder.get(purchaseorder.Id, qb=self.qb_client)
